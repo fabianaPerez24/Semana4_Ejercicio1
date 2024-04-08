@@ -8,21 +8,24 @@ namespace Semana4_actividad1
 {
     internal class Menu
     {
+        int n;
         public void SetANumber()
         {
             Console.WriteLine("Inserta un numero");
-            int n = int.Parse(Console.ReadLine());
-
+            n = int.Parse(Console.ReadLine());
 
 
             Console.WriteLine("El fibonacci del numero es:");
+            Fibonacci();
             Console.WriteLine("El primo del numero es:");
-            Console.WriteLine("Su numero perfecto es");
+            Primos();
+            //Console.WriteLine("Su numero perfecto es");
         }
 
 
         public void Fibonacci()
         {
+
             int a = 0;
             int b = 1;
 
@@ -37,11 +40,21 @@ namespace Semana4_actividad1
         }
         public void Primos()
         {
+            int m = 2;
+
+            if ((n % m) == 0)
+            {
+                Console.WriteLine("El numero es primo");
+            }
+            else
+            {
+                Console.WriteLine("El numero no es primo");
+            }
 
         }
-        public void NumeroPerfecto()
-        {
+        //public void NumeroPerfecto()
 
-        }
     }
+
+    
 }
